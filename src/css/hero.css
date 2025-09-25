@@ -1,0 +1,6 @@
+
+.hero {
+  background: url('../assets/bg_imgs/main_bg.png') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

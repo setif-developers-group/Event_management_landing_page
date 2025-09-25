@@ -1,0 +1,12 @@
+.register-page {
+  background: url('../assets/bg_imgs/register_bg.png') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.register-form-bg {
+
+    background: url('../assets/bg_imgs/register_bg_2.png') center center no-repeat;
+    background-size: 100% auto;
+
+}
