@@ -5,7 +5,7 @@ function About() {
         <div className=" about px-5 md:px-10 lg:px-60 grid grid-cols-1 md:grid-cols-2 py-16  " id="about">
             <div className='flex flex-col align-middle justify-center'>
             <h1 className='text-3xl font-bold mb-6 mt-6 text-white'>About the Event:</h1>
-            <p className='text-white'>The event, held at the Skills Center from 29 September to 22 November 2025 (daily from 13:00 to 17:00), is dedicated to empowering university students and all enthusiasts of IT and Entrepreneurship. With a strong focus on innovation, community building, and sustainable development goals, the event aims to provide valuable knowledge, develop practical skills for real-world challenges, and create meaningful opportunities for networking and collaboration.</p>
+            <p className='text-white'>SDG SKILLS LAB, held at the Skills Center from 29 September to 22 November 2025 (daily Except Friday from 13:00 to 17:00 PM), is dedicated to empowering university students and all enthusiasts of IT and Entrepreneurship. With a strong focus on innovation, community building, the event aims to provide valuable knowledge, develop practical skills for real-world challenges, and create meaningful opportunities for networking and collaboration.</p>
             </div>
             <div className="card-shadow">
             

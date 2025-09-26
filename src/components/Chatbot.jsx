@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Send, Bot, User, Loader2, RefreshCw } from 'lucide-react';
 import { CHATBOT_URL } from '../apis';
 
-const ChatBot = ({ apiEndpoint = `${CHATBOT_URL}/api/chatbot/sdg` }) => {
+const ChatBot = ({ apiEndpoint = `${CHATBOT_URL}/api/chatbot/event` }) => {
   const [messages, setMessages] = useState([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
