@@ -1,8 +1,7 @@
 import '../css/register.css'
 import sdg_full from '../assets/logo/sdg_full.png'
 import { useState, useEffect } from 'react';
-const SERVER_URL = 'http://127.0.0.1:8000';
-
+import { SERVER_URL } from '../apis';
 
 function Register() {
   const [formData, setFormData] = useState({

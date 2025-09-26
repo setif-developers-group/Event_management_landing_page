@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ChatBot from './components/Chatbot';
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
+      <ChatBot />
     </BrowserRouter>
 
     </>

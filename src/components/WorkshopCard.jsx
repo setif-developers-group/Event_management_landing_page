@@ -26,7 +26,7 @@ function WorkshopCard({Workshop: workshop}) {
         <span className="text-orange-500">🎤</span>
         <div className="text-gray-700 text-sm">
           {workshop.speakers.map((speaker, index) => (
-            <div key={index}>{speaker}</div>
+            <div key={index}>{speaker.name}</div>
           ))}
         </div>
         </div>
@@ -35,7 +35,7 @@ function WorkshopCard({Workshop: workshop}) {
 
       <div className="flex items-center gap-2">
         <span className="text-yellow-500">🤝</span>
-        <span className="text-gray-700 text-sm">Partner: {workshop.partner}</span>
+        <span className="text-gray-700 text-sm">Partner: {workshop.partner ? workshop.partner.name : 'N/A'}</span>
       </div>
     </div>
     </div>

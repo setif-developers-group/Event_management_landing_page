@@ -1,118 +1,29 @@
 
 import WorkshopCard from './WorkshopCard'
-import { useState } from 'react'
-
-const workshops = [
-  {
-    title: "Artificial Intelligence",
-    date: "29 Sept 2025",
-    duration: "1 Day",
-    speakers: ["Berrimi Mohammed", "Skander Hamdi"],
-    partner: "SDG Member"
-  },
-  {
-    title: "C++ and How to Think as a CS Student",
-    date: "1 Oct 2025",
-    duration: "4 Days",
-    speakers: ["Chenani Akram", "Taki Torki"],
-    partner: "SDG Member"
-  },
-  {
-    title: "Embedded Systems",
-    date: "6 Oct 2025",
-    duration: "4 Days",
-    speakers: ["Taki Torki"],
-    partner: null
-  },
-  {
-    title: "DevFest",
-    date: "11 Oct 2025",
-    duration: "1 Day",
-    speakers: ["GDG Speakers"],
-    partner: "GDG Setif"
-  },
-  {
-    title: "Design Thinking",
-    date: "12 Oct 2025",
-    duration: "1 Day",
-    speakers: ["Safie Zeqtouf"],
-    partner: "SDG Member"
-  },
-  {
-    title: "UI/UX Basics",
-    date: "13 Oct 2025",
-    duration: "2 Days",
-    speakers: ["Ghaithe Sofian"],
-    partner: "IntellectSoft dz"
-  },
-  {
-    title: "Web Basics + Django",
-    date: "15 Oct 2025",
-    duration: "6 Days",
-    speakers: ["IntellectSoft dz Speakers"],
-    partner: "IntellectSoft dz"
-  },
-  {
-    title: "MERN Stack Development",
-    date: "23 Oct 2025",
-    duration: "6 Days",
-    speakers: ["Moataz Chaaban"],
-    partner: null
-  },
-  {
-    title: "Mobile Development (Flutter)",
-    date: "30 Oct 2025",
-    duration: "6 Days",
-    speakers: ["Malek Lamara", "Brahim Mihoubi"],
-    partner: "SDG Member"
-  },
-  {
-    title: "Nesda Workshop",
-    date: "6 Nov 2025",
-    duration: "3 Days",
-    speakers: ["Nesda Speakers"],
-    partner: "Nesda"
-  },
-  {
-    title: "Closing Event",
-    date: "9 Nov 2025",
-    duration: "3 Days",
-    speakers: ["Matoukki Mohammed"],
-    partner: null
-  },
-  {
-    title: "Networking",
-    date: "13 Nov 2025",
-    duration: "3 Days",
-    speakers: ["Yacine Seha"],
-    partner: "Algérie Telecom"
-  },
-  {
-    title: "Cyber Security",
-    date: "16 Nov 2025",
-    duration: "3 Days",
-    speakers: ["Taki Torki"],
-    partner: null
-  },
-  {
-    title: "Project Management",
-    date: "20 Nov 2025",
-    duration: "1 Day",
-    speakers: ["IntellectSoft dz Speakers"],
-    partner: null
-  },
-  {
-    title: "E-commerce",
-    date: "22 Nov 2025",
-    duration: "3 Days",
-    speakers: ["Lamiri Yaakoub"],
-    partner: "SDG Member"
-  }
-];
-
+import { useState, useEffect } from 'react'
+import { SERVER_URL } from '../apis';
+const fetchWorkshops = async (setWorkshops) => {
+    try {
+        const response = await fetch(`${SERVER_URL}/api/workshops/all/`);
+        if (response.ok) {
+            const data = await response.json();
+            setWorkshops(data);
+        } else {
+            console.error('Failed to load workshops');
+        }
+    } catch (err) {
+        
+        console.error('Error:', err);
+    }
+};
 
 function Workshops() {
     const [viewAll, setViewAll] = useState(false);
+    const [workshops, setWorkshops] = useState([]);
+
+    useEffect(() => {
+        fetchWorkshops(setWorkshops);
+    }, [workshops.length]);
     return (
         <div className='px-5 md:px-10 lg:px-60' id="workshops">
             <h1 className='text-3xl font-bold mb-6 mt-10 text-brand-dark'>Upcoming Workshops & Sessions:</h1>
