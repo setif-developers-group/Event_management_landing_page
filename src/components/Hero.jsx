@@ -4,13 +4,13 @@ import robot_hand from '../assets/bg_imgs/robot_hand.png'
 import CountDown from './CountDown';
 function Hero() {
     return (
-        <div className="hero py-52 text-white px-5 md:px-10 lg:px-60 grid grid-cols-1 md:grid-cols-2" id="hero">
-            
-            <div className='z-10'>
+        <div className="hero py-52 text-white px-5 md:px-10 lg:px-60 grid grid-cols-1 " id="hero">
+
+            <div className='z-10 '>
                 <CountDown targetDate="2025-09-29T13:00:00" />
-            <h2 className='text-5xl my-6'>Learn. Build. Impact.</h2>
-            <p>Empowering students and innovators in IT & Entrepreneurship.Join us to gain knowledge, build skills, and connect with a 
-            thriving community.</p>
+            <h2 className='text-5xl font-semibold my-6'>Learn. Build. Impact.</h2>
+            <p>Empowering students and innovators in IT & Entrepreneurship.
+            <br />Join us to gain knowledge, build skills, and connect with a thriving community.</p>
             <Link to="/register">
             <button className="bg-brand text-white py-2 px-4 rounded-md mt-7">Register Now</button>
             </Link>

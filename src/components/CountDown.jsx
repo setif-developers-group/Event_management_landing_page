@@ -34,8 +34,8 @@ function CountDown({ targetDate }) {
 
     return (
 
-        <p>{formatTimeLeft(timeLeft)}</p>
-        
+        <p className='text-4xl'>{formatTimeLeft(timeLeft)}</p>
+
     );
 }
 

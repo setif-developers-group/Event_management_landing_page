@@ -8,11 +8,11 @@ function About() {
             <p className='text-white'>SDG SKILLS LAB, held at the Skills Center from 29 September to 22 November 2025 (daily Except Friday from 13:00 to 17:00 PM), is dedicated to empowering university students and all enthusiasts of IT and Entrepreneurship. With a strong focus on innovation, community building, the event aims to provide valuable knowledge, develop practical skills for real-world challenges, and create meaningful opportunities for networking and collaboration.</p>
             </div>
             <div className="card-shadow">
-            
-            <div className="flex justify-end pr-3 ">
+
+            <div className="flex justify-center md:justify-end pr-3 ">
                 {/* Shadow/background shape */}
-                <div className="absolute top-14 right-0 w-96 h-64   md:h-96 bg-white bg-opacity-30 rounded-2xl"></div>
-                
+                <div className="absolute top-14 right-auto md:right-0 w-96 h-64   md:h-96 bg-white bg-opacity-30 rounded-2xl"></div>
+
                 {/* Main image */}
                 <img src={ssc} 
                     className="relative rounded-2xl w-96  object-cover z-10 h-64  md:h-96 mt-11" 
