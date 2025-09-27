@@ -18,15 +18,18 @@ function WorkshopCard({Workshop: workshop}) {
 
       <div className="flex items-center gap-2 mb-2">
         <span className="text-orange-500">⏰</span>
-        <span className="text-gray-700 text-sm">{workshop.duration}</span>
+        <span className="text-gray-700 text-sm">{workshop.duration}H</span>
       </div>
-      
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-orange-500">📚</span>
+        <span className="text-gray-700 text-sm">{workshop.sessions} Sessions</span>
+      </div>
 
       <div className="flex items-start gap-2 mb-3">
         <span className="text-orange-500">🎤</span>
         <div className="text-gray-700 text-sm">
           {workshop.speakers.map((speaker, index) => (
-            <div key={index}>{speaker.name}</div>
+            <div key={index}>{speaker.name ? speaker.name : 'SDG Speaker'}</div>
           ))}
         </div>
         </div>

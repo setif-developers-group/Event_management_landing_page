@@ -10,7 +10,7 @@ function Footer() {
                     <img src={sdg} alt="SDG logo" className="h-12 mr-2" /> <h1 className="text-white text-2xl">Setif Developers Group</h1>
                 </div>
                 <div className="text-white pt-3">
-                    <p>SDG is a student scientific club at Sciences Faculty from University Farhat Abbas Setif 1 with 70 members across 6 departments, lead by Mihoubi Brahim. We focus on computer science education, IT challenges and Enterpreneurship stuff.</p>
+                    <p>SDG is a student scientific club at Sciences Faculty from University Farhat Abbas Setif 1 created in 2018, with 70 members across 6 departments, lead by Mihoubi Brahim. We focus on computer science education, IT challenges and Enterpreneurship stuff.</p>
                 </div>
             </div>
             <div className="text-center">
