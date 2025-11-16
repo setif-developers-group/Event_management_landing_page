@@ -24,7 +24,7 @@ const ChatBot = ({ apiEndpoint = `${CHATBOT_URL}/api/chatbot/event` }) => {
   useEffect(() => {
     const checkServer = async () => {
       try {
-        const baseUrl = apiEndpoint.split('/api')[0];
+        const baseUrl = apiEndpoint.split('/')[0];
         const response = await fetch(baseUrl);
         if (response.ok) {
           setIsServerReady(true);

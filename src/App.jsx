@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Home from './pages/Home';
+import Confirmation from './pages/Confirmation';
 import Register from './pages/Register';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Navbar from './components/Navbar';
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/register" element={<Register />} />
+        <Route path="/email-confirmation/*" element={<Confirmation />} />
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />

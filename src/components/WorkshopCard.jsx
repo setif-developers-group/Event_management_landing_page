@@ -29,7 +29,7 @@ function WorkshopCard({Workshop: workshop}) {
         <span className="text-orange-500">🎤</span>
         <div className="text-gray-700 text-sm">
           {workshop.speakers.map((speaker, index) => (
-            <div key={index}>{speaker.name ? speaker.name : 'SDG Speaker'}</div>
+            <div key={index}>{speaker.name ? speaker.name : 'SDG Speaker'} <span>{speaker.contact ? <a href={speaker.contact}>🔗</a> : 'N/A'}</span></div>
           ))}
         </div>
         </div>
