@@ -1,16 +1,70 @@
-# React + Vite
+# Event Management Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive event management landing page built with **React** and **Vite**. This platform showcases upcoming workshops and events with an interactive user interface, featuring countdown timers, event registration, and partner showcases.
 
-Currently, two official plugins are available:
+## About The Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This landing page serves as the main hub for event management, allowing users to:
+- Browse and explore upcoming workshops
+- Register for events seamlessly
+- Track event timelines with countdown timers
+- Discover event partners and sponsors
+- Connect with a built-in chatbot assistant
 
-## React Compiler
+## Key Features
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Interactive Components** - Dynamic workshop cards, countdown timers, and chatbot
+- **Event Registration** - Seamless registration and confirmation pages
+- **Partner Showcase** - Display event partners and sponsors
+- **Modern Tech Stack** - React + Vite + Tailwind CSS + ESLint
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/          # Reusable React components
+│   ├── Navbar.jsx      # Navigation bar
+│   ├── Hero.jsx        # Hero section
+│   ├── Workshops.jsx   # Workshops listing
+│   ├── WorkshopCard.jsx # Individual workshop card
+│   ├── CountDown.jsx   # Event countdown timer
+│   ├── About.jsx       # About section
+│   ├── Partners.jsx    # Partners showcase
+│   ├── Chatbot.jsx     # AI chatbot assistant
+│   └── Footer.jsx      # Footer section
+├── pages/              # Page components
+│   ├── Home.jsx        # Landing page
+│   ├── Register.jsx    # Event registration
+│   └── Confirmation.jsx # Registration confirmation
+├── apis.js             # API integration
+├── App.jsx             # Main App component
+└── main.jsx            # Entry point
+```
+
+## Tech Stack
+
+- **Frontend Framework:** React 18
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS
+- **Code Quality:** ESLint
+- **CSS Processing:** PostCSS
+
+## Security Features
+
+### reCAPTCHA Integration
+This project includes **Google reCAPTCHA v3** integration for enhanced security:
+- Prevents spam and bot submissions during email confirmation
+- Located in the **Confirmation page** (`src/pages/Confirmation.jsx`)
+- Validates user verification before processing registration confirmations
+- Handles captcha errors gracefully with user-friendly error messages
+- Automatically resets captcha on error or successful submission
+
+**Note:** You'll need to configure your Google reCAPTCHA site key and secret key in your environment.
+
+## Installation & Setup
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+- Google reCAPTCHA API keys (for email confirmation)
